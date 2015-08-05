@@ -39,8 +39,7 @@ print_r($result); // [99900 , 100 , 10000]</code></pre>
 Output of the program depends on how jobs are written.
 For instance, following job example returns success and failed stats count for push message reports (sent to smart devices) by calling a report API.
 Example output file:
-<br/><pre>
---------------------------------------------
+<br/><pre><code>--------------------------------------------
 Map Reduce in GO + PHP:
 by Waqar Alamgir
 --------------------------------------------
@@ -49,8 +48,7 @@ Success Jobs  85179
 Failed Jobs   14821
 Job Execution 43/sec
 --------------------------------------------
-Took: 23.422 secs Memory: 1 MB
-</pre>
+Took: 23.422 secs Memory: 1 MB</code></pre>
 
 
 ## Screenshot
