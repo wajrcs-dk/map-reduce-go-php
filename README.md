@@ -66,6 +66,11 @@ While in PHP set your config params like this:
 ));</code></pre>
 
 
+## Testing
+Run PHP unit tests by using following command.
+<br/><pre><code>php .\bin\phpunit.phar --bootstrap .\test\bootstrap.php .\test\MapReduceGoPhp\unit\MapReduceReportsTest</code></pre>
+
+
 ## Future Development
 As mentioned currently it supports HTTP GET requests. Later it is going to support POST, PUT and DELETE requests.
 Terminal commands will also be supported by system.

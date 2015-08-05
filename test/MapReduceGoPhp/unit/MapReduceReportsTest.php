@@ -1,5 +1,10 @@
 <?php
 
+use MapReduceGoPhp\Core\Config;
+use MapReduceGoPhp\MapReduce\PushCampaignStatsMapper;
+use MapReduceGoPhp\MapReduce\PushCampaignStatsReducer;
+use MapReduceGoPhp\MapReduceJobs\PushCampaignStatsJob;
+
 /**
  * MapReduceReportsTest Command
  * 

@@ -28,7 +28,6 @@ use \MapReduceGoPhp\MapReduce\PushCampaignStatsReducer;
 use \MapReduceGoPhp\MapReduceJobs\PushCampaignStatsJob;
 
 // Set config
-
 Config::setValues(array(
     'go_push_stats_api' => 'http://127.0.0.1:82/map-reduce-go-php/test/TestApi.php?a',
     'go_push_script' => 'C:\\Go\\bin\\go.exe run',

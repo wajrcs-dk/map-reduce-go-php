@@ -85,15 +85,15 @@ abstract class Job
      */
     public static function setter($map, $reduce, $params)
     {
-        $filePath = Config::getValue('base_path') . 'log' . DIRECTORY_SEPARATOR . $params['directory'] . DIRECTORY_SEPARATOR;
+        $filePath = Config::getValue('base_path') . 'log' . DIRECTORY_SEPARATOR;
         $jobId = $params['deviceType'] . '_' . $params['date'] . '_' . $params['rePull'] . '_' . $params['partition'];
         
         static::$_map = $map;
         static::$_reduce = $reduce;
         static::$_params = $params;
-        static::$_inputFile = $filePath . $params['jobPrefix'] . '_inp_' . $jobId . '.txt';
-        static::$_outputFile = $filePath . $params['jobPrefix'] . '_out_' . $jobId . '.txt';
-        static::$_errorFile = $filePath . $params['jobPrefix'] . '_err_' . $jobId . '.txt';
+        static::$_inputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_inp_' . $jobId . '.txt';
+        static::$_outputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_out_' . $jobId . '.txt';
+        static::$_errorFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_err_' . $jobId . '.txt';
         static::$_logFile = $filePath . 'go-logs' . DIRECTORY_SEPARATOR;
         
         return true;
