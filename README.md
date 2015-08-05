@@ -10,10 +10,10 @@ Currently [Mini Go Cluster](https://github.com/waqar-alamgir/mini-go-cluster) su
 
 ## Setup
 Run the following commands on Git Shell:
-<br/><code>
+<br/><pre><code>
 git clone https://github.com/waqar-alamgir/map-reduce-go-php.git
 git submodule foreach git pull
-</code>
+</code></pre>
 
 
 ## Execute
