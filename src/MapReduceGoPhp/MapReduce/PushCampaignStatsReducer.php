@@ -33,6 +33,7 @@ class PushCampaignStatsReducer implements Reducer
         $dataList = array();
         $dataList['success'] = 0;
         $dataList['failed'] = 0;
+        $dataList['jobs'] = 0;
         $dataList['error'] = 'Response is empty.';
         
         // Traverse array
@@ -40,6 +41,8 @@ class PushCampaignStatsReducer implements Reducer
             // Process the line read.
             if ($line != '') {
                 $data = explode('|', $line);
+                
+                ++$dataList['jobs'];
                 
                 // Count data
                 if (count($data) === 4) {

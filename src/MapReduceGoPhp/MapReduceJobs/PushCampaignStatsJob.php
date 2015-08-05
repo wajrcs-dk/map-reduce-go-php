@@ -34,7 +34,7 @@ final class PushCampaignStatsJob extends Job
      */
     public static function getPushIdsCount($date, $partition, $deviceType)
     {
-        return array('ROWS'=>10000);
+        return array('ROWS'=>100000);
     }
     
     /**
@@ -108,7 +108,7 @@ final class PushCampaignStatsJob extends Job
     public static function execute($map, $reduce, $params)
     {
         $result = parent::execute($map, $reduce, $params);
-        return array($result['success'], $result['failed']);
+        return array($result['success'], $result['failed'], $result['jobs']);
     }
 }
 
