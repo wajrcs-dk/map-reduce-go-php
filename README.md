@@ -10,21 +10,18 @@ Currently [Mini Go Cluster](https://github.com/waqar-alamgir/mini-go-cluster) su
 
 ## Setup
 Run the following commands on Git Shell:
-<br/><pre><code>
-git clone https://github.com/waqar-alamgir/map-reduce-go-php.git
-git submodule foreach git pull
-</code></pre>
+<br/><pre><code>git clone https://github.com/waqar-alamgir/map-reduce-go-php.git
+git submodule foreach git pull</code></pre>
 
 
 ## Execute
 Execute the process by running command like this (within the project directory):
-php .\src\bootstrap.php
+<br/><pre><code>php .\src\bootstrap.php</code></pre>
 
 
 ## Usage
 Use the process by running php commands like these:
-<br/><code>
-$mapper = new PushCampaignStatsMapper();
+<br/><pre><code>$mapper = new PushCampaignStatsMapper();
 $reducer = new PushCampaignStatsReducer();
 $params = array(
     'deviceType'=>'ios',
@@ -35,8 +32,7 @@ $params = array(
     'jobPrefix' => 'ps'
 );
 $result = PushCampaignStatsJob::execute($mapper, $reducer, $params);
-print_r($result); // [99900 , 100 , 10000]
-</code>
+print_r($result); // [99900 , 100 , 10000]</code></pre>
 
 
 ## Output
@@ -44,7 +40,16 @@ Output of the program depends on how jobs are written.
 For instance, following job example returns success and failed stats count for push message reports (sent to smart devices) by calling a report API.
 Example output file:
 <br/><pre>
-
+--------------------------------------------
+Map Reduce in GO + PHP:
+by Waqar Alamgir
+--------------------------------------------
+Simulated Final JSON output for job PushCampaignStatsJob:
+Success Jobs  85179
+Failed Jobs   14821
+Job Execution 43/sec
+--------------------------------------------
+Took: 23.422 secs Memory: 1 MB
 </pre>
 
 
@@ -54,17 +59,13 @@ Example output file:
 
 ## Configuration
 You can modify the following config for number of jobs to execute parallel in GO:
-<br/><code>
-var MAX_CONCURRENT_CONNECTION = 10
-</code>
+<br/><pre><code>var MAX_CONCURRENT_CONNECTION = 10</code></pre>
 
 While in PHP set your config params like this:
-<br/><code>
-Config::setValues(array(
+<br/><pre><code>Config::setValues(array(
     'go_push_stats_api' => 'http://127.0.0.1:82/map-reduce-go-php/test/TestApi.php?a',
     'go_push_script' => 'C:\\Go\\bin\\go.exe run',
-));
-</code>
+));</code></pre>
 
 
 ## Future Development
@@ -75,6 +76,7 @@ Terminal commands will also be supported by system.
 ## Developer Resources
 Check out the URLs bellow to find out how its done:<br/>
 [Go Lang Documentation and instalation](http://golang.org/)<br/>
+[PHP](http://php.net/)<br/>
 
 
 ## Interested in contributing?
