@@ -1,0 +1,3 @@
+[submodule "mini-go-cluster"]
+	path = mini-go-cluster
+	url = https://github.com/waqar-alamgir/mini-go-cluster.git

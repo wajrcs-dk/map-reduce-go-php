@@ -1,0 +1,133 @@
+Enter init
+Input file set: D:\wamp5.5\www\other-projects\map-reduce-go-php\log\push-stats\ps_inp_ios_20150629_1_0.txt
+Output file set: D:\wamp5.5\www\other-projects\map-reduce-go-php\log\push-stats\ps_out_ios_20150629_1_0.txt
+Output error file set: D:\wamp5.5\www\other-projects\map-reduce-go-php\log\push-stats\ps_err_ios_20150629_1_0.txt
+Exit init
+Enter main
+Enter process
+Creating channels
+Staring threads
+Thread 0
+Thread 1
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1&endLimit=100&jobId=1988265063
+Thread 2
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=101&endLimit=200&jobId=1726764044
+Thread 3
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=201&endLimit=300&jobId=1950286973
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=301&endLimit=400&jobId=907988552
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=401&endLimit=500&jobId=229732644
+Thread 4
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=501&endLimit=600&jobId=459576748
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=701&endLimit=800&jobId=1935806522
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=601&endLimit=700&jobId=1985021061
+Thread 5
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=801&endLimit=900&jobId=413274263
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1001&endLimit=1100&jobId=668314267
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=901&endLimit=1000&jobId=762238391
+Thread 6
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1101&endLimit=1200&jobId=1196680232
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1201&endLimit=1300&jobId=584811137
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1301&endLimit=1400&jobId=1649531957
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1401&endLimit=1500&jobId=1032367245
+Thread 7
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1501&endLimit=1600&jobId=514429371
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1601&endLimit=1700&jobId=1818991381
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1701&endLimit=1800&jobId=912461432
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1901&endLimit=2000&jobId=1942783636
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=1801&endLimit=1900&jobId=219957640
+Thread 8
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2001&endLimit=2100&jobId=397026905
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2301&endLimit=2400&jobId=722801212
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2201&endLimit=2300&jobId=1957454890
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2101&endLimit=2200&jobId=225322159
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2401&endLimit=2500&jobId=1292248141
+Thread 9
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2701&endLimit=2800&jobId=1790521646
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2801&endLimit=2900&jobId=594084591
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2501&endLimit=2600&jobId=60125157
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2901&endLimit=3000&jobId=1567566285
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3001&endLimit=3100&jobId=1658201393
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=2601&endLimit=2700&jobId=673447015
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3101&endLimit=3200&jobId=399438386
+Threads started 10
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3201&endLimit=3300&jobId=1300314650
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3501&endLimit=3600&jobId=458316161
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3401&endLimit=3500&jobId=1224254632
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3301&endLimit=3400&jobId=978749699
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3601&endLimit=3700&jobId=1974557120
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3801&endLimit=3900&jobId=1001346633
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3901&endLimit=4000&jobId=1470463571
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=3701&endLimit=3800&jobId=1070385963
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4101&endLimit=4200&jobId=1058449643
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4001&endLimit=4100&jobId=515405446
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4201&endLimit=4300&jobId=2005757791
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4301&endLimit=4400&jobId=2009386130
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4401&endLimit=4500&jobId=815739081
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4701&endLimit=4800&jobId=722834474
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4501&endLimit=4600&jobId=1287181604
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4601&endLimit=4700&jobId=250088684
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4801&endLimit=4900&jobId=468263482
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=4901&endLimit=5000&jobId=1493467361
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5101&endLimit=5200&jobId=194923862
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5301&endLimit=5400&jobId=1881509297
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5201&endLimit=5300&jobId=506095057
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5001&endLimit=5100&jobId=151194905
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5401&endLimit=5500&jobId=713475945
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5601&endLimit=5700&jobId=1444129751
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5501&endLimit=5600&jobId=706093715
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5701&endLimit=5800&jobId=802514630
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5901&endLimit=6000&jobId=2023890343
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6001&endLimit=6100&jobId=954770084
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=5801&endLimit=5900&jobId=2008173405
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6101&endLimit=6200&jobId=196606692
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6201&endLimit=6300&jobId=433483267
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6301&endLimit=6400&jobId=850884824
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6501&endLimit=6600&jobId=301973577
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6401&endLimit=6500&jobId=2101153446
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6601&endLimit=6700&jobId=945197636
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6801&endLimit=6900&jobId=1274726231
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6901&endLimit=7000&jobId=2012059156
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=6701&endLimit=6800&jobId=745484036
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7201&endLimit=7300&jobId=961673125
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7001&endLimit=7100&jobId=426122608
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7101&endLimit=7200&jobId=221990716
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7301&endLimit=7400&jobId=357949517
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7401&endLimit=7500&jobId=1871054551
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7501&endLimit=7600&jobId=575512543
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7801&endLimit=7900&jobId=1901806807
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7901&endLimit=8000&jobId=836728929
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7701&endLimit=7800&jobId=1624935754
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=7601&endLimit=7700&jobId=970273363
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8101&endLimit=8200&jobId=1617824621
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8401&endLimit=8500&jobId=319725712
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8301&endLimit=8400&jobId=1278712347
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8001&endLimit=8100&jobId=916775102
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8201&endLimit=8300&jobId=910892477
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8501&endLimit=8600&jobId=1638092692
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8701&endLimit=8800&jobId=1174132060
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8801&endLimit=8900&jobId=562970668
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8601&endLimit=8700&jobId=78323895
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=8901&endLimit=9000&jobId=1232174330
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9101&endLimit=9200&jobId=1929266955
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9201&endLimit=9300&jobId=1546888508
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9001&endLimit=9100&jobId=741747616
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9301&endLimit=9400&jobId=643033405
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9401&endLimit=9500&jobId=2022210434
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9501&endLimit=9600&jobId=1687122755
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9601&endLimit=9700&jobId=1817719097
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9701&endLimit=9800&jobId=1587178263
+Invalid input: 
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9901&endLimit=10000&jobId=189596916
+Success url http://127.0.0.1:82/other-projects/map-reduce-go-php/test/TestApi.php?a&deviceType=ios&date=20150629&rePull=1&partition=0&directory=push-stats&jobPrefix=ps&startLimit=9801&endLimit=9900&jobId=263718239
+At thread 8
+At thread 7
+At thread 4
+At thread 5
+At thread 3
+At thread 2
+At thread 9
+At thread 6
+At thread 0
+At thread 1
+Script started at: 20150805201744 and ended at: 20150805201747
+Exit main
