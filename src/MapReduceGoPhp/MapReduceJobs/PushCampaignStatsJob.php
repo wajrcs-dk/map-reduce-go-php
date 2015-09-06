@@ -45,7 +45,7 @@ final class PushCampaignStatsJob extends Job
      */
     public static function processInput()
     {
-        $row = static::getPushIdsCount(static::$_params['date'], static::$_params['partition'], static::$_params['deviceType']);
+        $row = static::getPushIdsCount(static::$params['date'], static::$params['partition'], static::$params['deviceType']);
         $count = 0;
         $url = Config::getValue('go_push_stats_api');
         
@@ -55,12 +55,12 @@ final class PushCampaignStatsJob extends Job
         }
         
         // Open the file
-        $fp = fopen(static::$_inputFile, 'w');
-        $params = static::$_params;
+        $fp = fopen(static::$inputFile, 'w');
+        $params = static::$params;
         
         // Generating urls
-        for ($startLimit=1; $startLimit<=$count; $startLimit += static::$_limit) {
-            $endLimit = $startLimit + static::$_limit - 1;
+        for ($startLimit=1; $startLimit<=$count; $startLimit += static::$limit) {
+            $endLimit = $startLimit + static::$limit - 1;
             $endLimit = ($endLimit>$count) ? $count:$endLimit;
             $params['startLimit'] = $startLimit;
             $params['endLimit'] = $endLimit;
@@ -81,14 +81,14 @@ final class PushCampaignStatsJob extends Job
     public static function processOutput()
     {
         // Open a file for processing
-        $handle = fopen(static::$_outputFile, 'r');
-        static::$_lines = array();
+        $handle = fopen(static::$outputFile, 'r');
+        static::$lines = array();
         
         // If file exists
         if ($handle) {
             // Read file line by line
             while (($line = fgets($handle)) !== false) {
-                static::$_lines[] = trim($line);
+                static::$lines[] = trim($line);
             }
         }
         

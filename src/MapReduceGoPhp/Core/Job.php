@@ -21,57 +21,57 @@ abstract class Job
 {
     /**
      * Mapper instance
-     * @var $_map object
+     * @var $map object
      */
-    protected static $_map;
+    protected static $map;
     
     /**
      * Reducer instance
-     * @var $_reduce object
+     * @var $reduce object
      */
-    protected static $_reduce;
+    protected static $reduce;
     
     /**
      * Params provided for the job
-     * @var $_params array
+     * @var $params array
      */
-    protected static $_params;
+    protected static $params;
     
     /**
      * Split the job into pages with limit
-     * @var $_limit int
+     * @var $limit int
      */
-    protected static $_limit = 100;
+    protected static $limit = 100;
     
     /**
      * Input file name
-     * @var $_inputFile string
+     * @var $inputFile string
      */
-    protected static $_inputFile;
+    protected static $inputFile;
     
     /**
      * Output file name
-     * @var $_outputFile string
+     * @var $outputFile string
      */
-    protected static $_outputFile;
+    protected static $outputFile;
     
     /**
      * Error file name
-     * @var $_errorFile string
+     * @var $errorFile string
      */
-    protected static $_errorFile;
+    protected static $errorFile;
     
     /**
      * Log file name
-     * @var $_logFile string
+     * @var $logFile string
      */
-    protected static $_logFile;
+    protected static $logFile;
     
     /**
      * Contains Output file rows
-     * @var $_lines array
+     * @var $lines array
      */
-    protected static $_lines;
+    protected static $lines;
     
     /**
      * Sets values for Job instance members
@@ -85,18 +85,24 @@ abstract class Job
      */
     public static function setter($map, $reduce, $params)
     {
-        $filePath = Config::getValue('base_path') . 'log' . DIRECTORY_SEPARATOR;
-        $jobId = $params['deviceType'] . '_' . $params['date'] . '_' . $params['rePull'] . '_' . $params['partition'];
-        
-        static::$_map = $map;
-        static::$_reduce = $reduce;
-        static::$_params = $params;
-        static::$_inputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_inp_' . $jobId . '.txt';
-        static::$_outputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_out_' . $jobId . '.txt';
-        static::$_errorFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_err_' . $jobId . '.txt';
-        static::$_logFile = $filePath . 'go-logs' . DIRECTORY_SEPARATOR;
+        static::setFileNames($params);
+        static::$map = $map;
+        static::$reduce = $reduce;
         
         return true;
+    }
+    
+    /**
+     * Sets value for Job instance member
+     * 
+     * @param string $limit Limit value.
+     * 
+     * @return null
+     * @author Waqar Alamgir <walamgir@folio3.oom>
+     */
+    public static function overrideLimit($limit)
+    {
+        static::$limit = $limit;
     }
     
     /**
@@ -124,16 +130,9 @@ abstract class Job
      */
     public static function execute($map, $reduce, $params)
     {
-        $filePath = Config::getValue('base_path') . 'log' . DIRECTORY_SEPARATOR;
-        $jobId = $params['deviceType'] . '_' . $params['date'] . '_' . $params['rePull'] . '_' . $params['partition'];
-        
-        static::$_map = $map;
-        static::$_reduce = $reduce;
-        static::$_params = $params;
-        static::$_inputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_inp_' . $jobId . '.txt';
-        static::$_outputFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_out_' . $jobId . '.txt';
-        static::$_errorFile = $filePath . $params['directory'] . DIRECTORY_SEPARATOR . $params['jobPrefix'] . '_err_' . $jobId . '.txt';
-        static::$_logFile = $filePath . 'go-logs' . DIRECTORY_SEPARATOR;
+        static::setFileNames($params);
+        static::$map = $map;
+        static::$reduce = $reduce;
         
         // Free up memory
         $map = null;
@@ -147,12 +146,12 @@ abstract class Job
         static::processInput();
         
         // Execute map
-        static::$_map->map(
+        static::$map->map(
             array(
-                'input' => static::$_inputFile,
-                'output' => static::$_outputFile,
-                'error' => static::$_errorFile,
-                'log' => static::$_logFile,
+                'input' => static::$inputFile,
+                'output' => static::$outputFile,
+                'error' => static::$errorFile,
+                'log' => static::$logFile,
             )
         );
         
@@ -160,7 +159,26 @@ abstract class Job
         static::processOutput();
         
         // Execute reduce
-        return static::$_reduce->reduce(static::$_lines);
+        return static::$reduce->reduce(static::$lines);
+    }
+    
+     /**
+     * Generates and set file names
+     * 
+     * @param string $params Input params for the job.
+     * 
+     * @return null
+     * @author Waqar Alamgir <walamgir@folio3.oom>
+     */
+    public static function setFileNames($params)
+    {
+        $filePath = Config::getValue('base_path') . 'log' . DIRECTORY_SEPARATOR;
+        
+        static::$params = $params;
+        static::$inputFile = $filePath . $params['jobPrefix'] . '_inp_' . $params['strJobId'] . '.txt';
+        static::$outputFile = $filePath . $params['jobPrefix'] . '_out_' . $params['strJobId'] . '.txt';
+        static::$errorFile = $filePath . $params['jobPrefix'] . '_err_' . $params['strJobId'] . '.txt';
+        static::$logFile = $filePath . 'go-logs' . DIRECTORY_SEPARATOR;
     }
     
     /**

@@ -16,12 +16,32 @@ use MapReduceGoPhp\MapReduceJobs\PushCampaignStatsJob;
  * @package  PushNotifications
  * @author   Waqar Alamgir <walamgir@folio3.oom>
  * @chainlog none
- * @license  http://www.barnesandnoble.com/ PHP License 1.0
- * @link     http://www.barnesandnoble.com/
+ * @license  https://raw.githubusercontent.com/waqar-alamgir/map-reduce-go-php/master/LICENSE The MIT License (MIT)
+ * @link     https://raw.githubusercontent.com/waqar-alamgir/map-reduce-go-php/master/LICENSE
  */
 
 class MapReduceReportsTest extends PHPUnit_Framework_TestCase
 {
+	private $_params = array();
+	
+	public function __construct()
+	{
+		$device = 'ios';
+        $date = '2015-06-29';
+        $repull = 'YES_REPULL';
+        $singleDay = 'SINGLE_DAY';
+        
+        $this->params = array(
+            'deviceType'=>$device,
+            'date'=>date('Ymd', strtotime($date)),
+            'rePull'=>(($repull=='NO_REPULL')?0:1),
+            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
+            'directory' => 'push-stats',
+            'jobPrefix' => 'ps',
+            'strJobId' => 'ios-20150629'
+        );
+	}
+	
     public function testApIUrlConfig()
 	{
 		$url = Config::getValue('go_push_stats_api');
@@ -31,88 +51,45 @@ class MapReduceReportsTest extends PHPUnit_Framework_TestCase
             $loaded = 1;
         }
 		
-		$this->assertEquals(1 , $loaded);
+		$this->assertEquals(1, $loaded);
 	}
     
     public function testParams()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
+        $result = PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         
-        $this->assertEquals(true , $result);
+        $this->assertEquals(true, $result);
     }
     
     public function testProcessInput()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
         
-        $this->assertEquals(true , file_exists(PushCampaignStatsJob::getter('_inputFile')));
+        $this->assertEquals(true, file_exists(PushCampaignStatsJob::getter('inputFile')));
     }
     
     public function testCheckProcessInput()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
-        
         $result = true;
-        
-        $handle = fopen(PushCampaignStatsJob::getter('_inputFile'), 'r');
+        $handle = fopen(PushCampaignStatsJob::getter('inputFile'), 'r');
         if ($handle)
         {
             while (($line = fgets($handle)) !== false) {
                 // process the line read.
                 $line = trim($line);
-                $count = count(explode('|' , $line));
+                $count = count(explode('|', $line));
                 
                 if($count !== 4)
                 {
@@ -122,186 +99,106 @@ class MapReduceReportsTest extends PHPUnit_Framework_TestCase
         }
         fclose($handle);
         
-        $this->assertEquals(true , $result);
+        $this->assertEquals(true, $result);
     }
     
     public function testMap()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
-        
-        PushCampaignStatsJob::getter('_map')->map(
+        PushCampaignStatsJob::getter('map')->map(
             array(
-                'input' => PushCampaignStatsJob::getter('_inputFile'),
-                'output' => PushCampaignStatsJob::getter('_outputFile'),
-                'error' => PushCampaignStatsJob::getter('_errorFile'),
-                'log' => PushCampaignStatsJob::getter('_logFile'),
+                'input' => PushCampaignStatsJob::getter('inputFile'),
+                'output' => PushCampaignStatsJob::getter('outputFile'),
+                'error' => PushCampaignStatsJob::getter('errorFile'),
+                'log' => PushCampaignStatsJob::getter('logFile'),
             )
         );
         
-        $this->assertEquals(true , file_exists(PushCampaignStatsJob::getter('_outputFile')));
+        $this->assertEquals(true, file_exists(PushCampaignStatsJob::getter('outputFile')));
     }
     
     public function testProcessOutput()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
-        
-        PushCampaignStatsJob::getter('_map')->map(
+        PushCampaignStatsJob::getter('map')->map(
             array(
-                'input' => PushCampaignStatsJob::getter('_inputFile'),
-                'output' => PushCampaignStatsJob::getter('_outputFile'),
-                'error' => PushCampaignStatsJob::getter('_errorFile'),
-                'log' => PushCampaignStatsJob::getter('_logFile'),
+                'input' => PushCampaignStatsJob::getter('inputFile'),
+                'output' => PushCampaignStatsJob::getter('outputFile'),
+                'error' => PushCampaignStatsJob::getter('errorFile'),
+                'log' => PushCampaignStatsJob::getter('logFile'),
             )
         );
-        
         PushCampaignStatsJob::processOutput();
         
-        $this->assertEquals(true , is_array(PushCampaignStatsJob::getter('_lines')));
+        $this->assertEquals(true, is_array(PushCampaignStatsJob::getter('lines')));
     }
     
     public function testCheckProcessOutput()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
-        
-        PushCampaignStatsJob::getter('_map')->map(
+        PushCampaignStatsJob::getter('map')->map(
             array(
-                'input' => PushCampaignStatsJob::getter('_inputFile'),
-                'output' => PushCampaignStatsJob::getter('_outputFile'),
-                'error' => PushCampaignStatsJob::getter('_errorFile'),
-                'log' => PushCampaignStatsJob::getter('_logFile'),
+                'input' => PushCampaignStatsJob::getter('inputFile'),
+                'output' => PushCampaignStatsJob::getter('outputFile'),
+                'error' => PushCampaignStatsJob::getter('errorFile'),
+                'log' => PushCampaignStatsJob::getter('logFile'),
             )
         );
-        
         PushCampaignStatsJob::processOutput();
-        
-        
         $result = true;
-        
-        foreach (PushCampaignStatsJob::getter('_lines') as $val)
+        foreach (PushCampaignStatsJob::getter('lines') as $val)
         {
-            $count = count(explode('|' , $val));
+            $count = count(explode('|', $val));
             if($count !== 4)
             {
                 $result = false;
             }
         }
         
-        $this->assertEquals(true , $result);
+        $this->assertEquals(true, $result);
     }
     
     public function testReduce()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::setter($mapper , $reducer , $params);
-        
+        PushCampaignStatsJob::setter($mapper, $reducer, $this->params);
         PushCampaignStatsJob::processInput();
-        
-        PushCampaignStatsJob::getter('_map')->map(
+        PushCampaignStatsJob::getter('map')->map(
             array(
-                'input' => PushCampaignStatsJob::getter('_inputFile'),
-                'output' => PushCampaignStatsJob::getter('_outputFile'),
-                'error' => PushCampaignStatsJob::getter('_errorFile'),
-                'log' => PushCampaignStatsJob::getter('_logFile'),
+                'input' => PushCampaignStatsJob::getter('inputFile'),
+                'output' => PushCampaignStatsJob::getter('outputFile'),
+                'error' => PushCampaignStatsJob::getter('errorFile'),
+                'log' => PushCampaignStatsJob::getter('logFile'),
             )
         );
-        
         PushCampaignStatsJob::processOutput();
+        $result = PushCampaignStatsJob::getter('reduce')->reduce(PushCampaignStatsJob::getter('lines'));
         
-        $result = PushCampaignStatsJob::getter('_reduce')->reduce(PushCampaignStatsJob::getter('_lines'));
-        
-        $this->assertEquals(true , (is_array($result) && isset($result['success'] , $result['failed'])));
+        $this->assertEquals(true, (is_array($result) && isset($result['success'], $result['failed'])));
     }
     
     public function testFinalTest()
     {
-        $device = 'ios';
-        $date = '2015-06-29';
-        $repull = 'YES_REPULL';
-        $singleDay = 'SINGLE_DAY';
-        
         $mapper = new PushCampaignStatsMapper();
         $reducer = new PushCampaignStatsReducer();
-        $params = array(
-            'deviceType'=>$device,
-            'date'=>date('Ymd', strtotime($date)),
-            'rePull'=>(($repull=='NO_REPULL')?0:1),
-            'partition'=>(($singleDay=='PARTITION_DAY')?1:0),
-            'directory' => 'push-stats',
-            'jobPrefix' => 'ps'
-        );
         
-        $result = PushCampaignStatsJob::execute($mapper, $reducer, $params);
+        $result = PushCampaignStatsJob::execute($mapper, $reducer, $this->params);
         
-        $this->assertEquals(true , (is_array($result) && isset($result[0] , $result[1])));
+        $this->assertEquals(true, (is_array($result) && isset($result[0], $result[1])));
     }
 }
 

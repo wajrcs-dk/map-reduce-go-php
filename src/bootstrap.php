@@ -37,12 +37,13 @@ Config::setValues(array(
 $mapper = new PushCampaignStatsMapper();
 $reducer = new PushCampaignStatsReducer();
 $params = array(
-    'deviceType'=>'ios',
-    'date'=>'20150629',
-    'rePull'=>0,
-    'partition'=>0,
+    'deviceType' => 'ios',
+    'date' => '20150629',
+    'rePull' => 0,
+    'partition' => 0,
     'directory' => 'push-stats',
-    'jobPrefix' => 'ps'
+    'jobPrefix' => 'ps',
+    'strJobId' => 'ios-20150629'
 );
 
 echo '--------------------------------------------' , PHP_EOL;
